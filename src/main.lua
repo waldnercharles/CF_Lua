@@ -1,4 +1,8 @@
 function main()
+	local t = {}
+	for i = 1, 256 do table.insert(t, i) end
+	test_large_array(t)
+
 	make_app("cute imgui image test", default_display(), 0, 0, 640, 480, APP_OPTIONS_WINDOW_POS_CENTERED_BIT | APP_OPTIONS_RESIZABLE_BIT, argv0)
 	app_init_imgui()
 	mount_directory_as("../content", "/")

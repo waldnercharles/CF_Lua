@@ -86,6 +86,9 @@ REF_FUNCTION(wait_for_debugger);
 
 #include <direct.h> // chdir
 
+void test_large_array(uint64_t *array, int count) { }
+REF_FUNCTION(test_large_array, {0,1});
+
 int main(int argc, char* argv[])
 {
 	b2SetAssertFcn(b2_assert_override);
